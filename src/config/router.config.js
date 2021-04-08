@@ -15,6 +15,18 @@ export const asyncRouterMap = [
     meta: { title: 'menu.home' },
     redirect: '/dashboard/workplace',
     children: [
+      {
+        path: '/workflow',
+        name: 'workflow',
+        component: () => import('@/views/workflow/workflow'),
+        meta: { title: '工作流', keepAlive: true, permission: ['dashboard'] }
+      },
+      {
+        path: '/lf',
+        name: 'lf',
+        component: () => import('@/views/lf/LF'),
+        meta: { title: '工作流2', keepAlive: true, permission: ['dashboard'] }
+      },
       // dashboard
       {
         path: '/dashboard',
